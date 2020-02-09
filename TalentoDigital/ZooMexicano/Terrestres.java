@@ -41,9 +41,9 @@ public class Terrestres extends Animales {
 
 	@Override
 	public String toString() {
-		return "Terrestres [cantPatas=" + cantPatas + ", tipoAlimentacion=" + tipoAlimentacion + ", horasSueno="
-				+ horasSueno + ", getNombre()=" + getNombre() + ", getPaisOrigen()=" + getPaisOrigen()
-				+ ", getFechaIngreso()=" + getFechaIngreso() + "]";
+		return "Terrestres [Nombre = " + getNombre() + ", País de Origen = " + getPaisOrigen()
+				+ ", Fecha Ingreso = " + getFechaIngreso() + ", Cantidad de Patas = " + cantPatas + ","
+				+ " Tipo Alimentacion= " + tipoAlimentacion + ", Horas de sueño = " + horasSueno + " ]";
 	}
 	
 	

@@ -4,14 +4,14 @@ public class Voladores extends Animales {
 	
 	private String colorPluma;
 	private int size;
-	private boolean migrante;
+	private int migrante;
 	
 	public Voladores() {
 		
 	}
 	
 	public Voladores(String nombre, String paisOrigen, String fechaIngreso,
-						String colorPluma, int size, boolean migrante) {
+						String colorPluma, int size, int migrante) {
 		
 		super(nombre, paisOrigen, fechaIngreso);
 		
@@ -36,19 +36,26 @@ public class Voladores extends Animales {
 		this.size = size;
 	}
 
-	public boolean isMigrante() {
-		return migrante;
+	public String isMigrante() {
+		String migranteRespuesta = "";
+		if (this.migrante == 1) {
+			migranteRespuesta = "Es un animal migrante";
+		}else {
+			migranteRespuesta = "Es un animal No migrante";
+		}
+		return migranteRespuesta;
 	}
 
-	public void setMigrante(boolean migrante) {
+	public void setMigrante(int migrante) {
 		this.migrante = migrante;
 	}
 
 	@Override
 	public String toString() {
-		return "Voladores [colorPluma=" + colorPluma + ", size=" + size + ", migrante=" + migrante + ", getNombre()="
-				+ getNombre() + ", getPaisOrigen()=" + getPaisOrigen() + ", getFechaIngreso()=" + getFechaIngreso()
-				+ "]";
+		return "Voladores [Nombre = " + getNombre() + ", País de Origen = " + 
+				 getPaisOrigen() + ", Fecha de Ingreso = " + getFechaIngreso() +
+				 " Color de Pluma = " + colorPluma + ", size = " + size + 
+				 "cms, migrante = " + isMigrante() + "]";
 	}
 	
 	

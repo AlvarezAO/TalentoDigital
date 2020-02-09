@@ -2,7 +2,7 @@ package ZooMexicano;
 
 public class Acuaticos extends Animales {
 	
-	private boolean ambiente;
+	private int ambiente;
 	private int numAletas;
 	private int nivelAgresividad;
 	
@@ -11,7 +11,7 @@ public class Acuaticos extends Animales {
 	}
 	
 	public Acuaticos(String nombre, String paisOrigen, String fechaIngreso,
-						boolean ambiente, int numAletas, int nivelAgresividad) {
+						int ambiente, int numAletas, int nivelAgresividad) {
 		
 		super(nombre, paisOrigen, fechaIngreso);
 		
@@ -20,12 +20,21 @@ public class Acuaticos extends Animales {
 		this.nivelAgresividad = nivelAgresividad;
 	}
 
-	public boolean isAmbiente() {
+	public String isAmbiente() {
+		String ambiente = "";
+		if(this.ambiente == 1) {
+			ambiente = "Es agua dulce";
+		} 
+		else if (this.ambiente == 2) {
+			ambiente = "Es agua salada";
+		}
+				
 		return ambiente;
 	}
 
-	public void setAmbiente(boolean ambiente) {
+	public void setAmbiente(int ambiente) {
 		this.ambiente = ambiente;
+		
 	}
 
 	public int getNumAletas() {
@@ -36,8 +45,19 @@ public class Acuaticos extends Animales {
 		this.numAletas = numAletas;
 	}
 
-	public int getNivelAgresividad() {
-		return nivelAgresividad;
+	public String getNivelAgresividad() {
+		String levelAgresividad = "";
+		if(this.nivelAgresividad == 1) {
+			levelAgresividad = "Es poco Agresivo";
+		} 
+		else if (this.nivelAgresividad == 2) {
+			levelAgresividad = "Es de agresividad normal";
+		}
+		else if (this.nivelAgresividad == 3) {
+			levelAgresividad = "Es muy agresivo";
+		} 
+		
+		return levelAgresividad;
 	}
 
 	public void setNivelAgresividad(int nivelAgresividad) {
@@ -46,9 +66,11 @@ public class Acuaticos extends Animales {
 
 	@Override
 	public String toString() {
-		return "Acuaticos [ambiente=" + ambiente + ", numAletas=" + numAletas + ", nivelAgresividad=" + nivelAgresividad
-				+ ", getNombre()=" + getNombre() + ", getPaisOrigen()=" + getPaisOrigen() + ", getFechaIngreso()="
-				+ getFechaIngreso() + "]";
+		return "Acuaticos [Nombre = " + getNombre() + ", País de Origen = "
+				 + getPaisOrigen() + ", Fecha de Ingreso = "
+				+ getFechaIngreso() +", Tipo de ambiente=" + isAmbiente() + 
+				", Cantidad Aletas = " + numAletas + ", nivelAgresividad=" + getNivelAgresividad()
+				 + "]";
 	}
 	
 	

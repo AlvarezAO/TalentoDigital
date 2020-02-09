@@ -6,21 +6,36 @@ public class Zoologico {
 	
 	private ArrayList<Terrestres> listaTierra = new ArrayList<Terrestres>();
 		
-		public void addTierra(Terrestres uno) {
-			listaTierra.add(uno);
+		public void addTierra(Terrestres variableAgrega) {
+			listaTierra.add(variableAgrega);
 		}
 		
 	private ArrayList<Acuaticos> listaAgua = new ArrayList<Acuaticos>();
 		
-		public void addAgua(Acuaticos uno) {
-			listaAgua.add(uno);
+		public void addAgua(Acuaticos variableAgrega) {
+			listaAgua.add(variableAgrega);
 		}
 		
 	private ArrayList<Voladores> listaAire = new ArrayList<Voladores>();
 		
-		public void addAire(Voladores uno) {
-			listaAire.add(uno);
+		public void addAire(Voladores variableAgrega) {
+			listaAire.add(variableAgrega);
 		}
+		
+	public int sizeTierra() {
+		int tamanioLista = listaTierra.size();
+		return tamanioLista;
+	}
+	
+	public int sizeAgua() {
+		int tamanioLista = listaAgua.size();
+		return tamanioLista;
+	}
+	
+	public int sizeAire() {
+		int tamanioLista = listaAire.size();
+		return tamanioLista;
+	}
 		
 		
 	public void muestraTierra()	{
