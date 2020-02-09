@@ -122,6 +122,6 @@ public class MainZoo {
 			
 			
 		} while (option != 4);
-			
+		kb.close();	
 	}
 }
